@@ -1,0 +1,39 @@
+name: Validate Skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check all SKILL.md files have required frontmatter
+        run: |
+          failed=0
+          for skill in $(find skills/ -name "SKILL.md"); do
+            # Check for name field
+            if ! grep -q "^name:" "$skill"; then
+              echo "❌ Missing 'name:' in $skill"
+              failed=1
+            fi
+            # Check for description field
+            if ! grep -q "^description:" "$skill"; then
+              echo "❌ Missing 'description:' in $skill"
+              failed=1
+            fi
+            echo "✓ $skill"
+          done
+
+          if [ $failed -eq 1 ]; then
+            echo ""
+            echo "Some skill files are missing required frontmatter."
+            exit 1
+          fi
+
+          echo ""
+          echo "All skills valid."
