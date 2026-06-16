@@ -28,6 +28,7 @@ This pack introduces **layer skills** — meta-skills that group related special
 |---|---|---|
 | `founder-layer` | Business, investors, GTM, content | investor-materials, investor-outreach, market-research, brand-voice, copywriting, article-writing, launch-strategy, pricing-strategy, competitive-landscape |
 | `engineering-layer` | Code, architecture, APIs, security | api-design, backend-patterns, security-review, react-patterns, react-performance, nextjs-app-router-patterns, postgres-patterns, database-migrations, deployment-patterns, tdd-workflow, java-coding-standards |
+| `security-layer` | Security auditing, vulnerability hunting, vibe-coded app hardening | security-review, find-bugs, gha-security-review, code-review |
 | `product-layer` | Product strategy, discovery, specs | product-lens, lean-startup, 37signals-way, mom-test, jobs-to-be-done, prioritization-advisor, prd-development, hooked-ux, user-story |
 | `design-layer` | UI quality, motion, anti-slop | impeccable, design-taste-frontend, redesign-existing-projects, framer-motion-animator, animation-micro-interaction-pack |
 | `document-layer` | File creation and reading | docx, pptx, xlsx, pdf, file-reading, pdf-reading |
@@ -58,6 +59,7 @@ The layer skill is the router. The individual skills are the knowledge. Both nee
 |---|---|
 | `founder-layer` | Routes business, investor, GTM, and content tasks |
 | `engineering-layer` | Routes code, architecture, security, and deployment tasks |
+| `security-layer` | Routes security audits, vulnerability hunts, and vibe-coded app hardening |
 | `product-layer` | Routes product strategy, discovery, and spec tasks |
 | `design-layer` | Routes UI quality, motion, and design audit tasks |
 | `document-layer` | Routes file creation and reading tasks |
@@ -67,6 +69,9 @@ The layer skill is the router. The individual skills are the knowledge. Both nee
 | Skill | What it does |
 |---|---|
 | `security-review` | Secrets management, input validation, SQL injection, XSS, CSRF, auth, RLS |
+| `find-bugs` | Branch-diff scanner — maps attack surface, runs OWASP checklist per changed file |
+| `gha-security-review` | GitHub Actions audit — pwn-request, expression injection, supply chain, credential theft |
+| `code-review` | Holistic PR review — runtime errors, N+1s, perf, backwards compat, security |
 | `api-design` | REST naming, status codes, pagination, versioning, error format |
 | `backend-patterns` | Repository + service layer, caching, background jobs, middleware |
 | `react-patterns` | Composition, compound components, custom hooks, context |
